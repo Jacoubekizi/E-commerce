@@ -1,0 +1,12 @@
+{% extends 'store/main.html' %}
+ {% load static %}
+  {% block title %}ChangePassword{% endblock %}
+ {% block content %}
+
+ <form action="" method="post">
+    {% csrf_token %}
+    {% include 'forms/form.html' %}
+    <!-- <p>Dont have an account? Create one <a href="{% url 'signup' %}">Hear</a>!</p> -->
+    <button type="submit" class="btn btn-success">Change</button>
+</form>
+ {% endblock content %}
